@@ -27,7 +27,7 @@ public class Main {
         if(isValid){
             System.out.println("User validated");
         }else{
-            System.out.println("User cannot validated");
+            System.out.println("User cannot validated!");
         }
 
         Promotions promotions = new Promotions();
