@@ -1,9 +1,8 @@
-package org.example.core.utils;
+package org.example.utils;
 
 import org.example.entities.User;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class EDevlet {
     private String name;

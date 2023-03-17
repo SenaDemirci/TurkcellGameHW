@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.core.utils.EDevlet;
+import org.example.utils.EDevlet;
 import org.example.entities.Games;
 import org.example.entities.Promotions;
 import org.example.entities.User;
