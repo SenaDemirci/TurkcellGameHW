@@ -14,8 +14,8 @@ public class Main {
         User user1 = new User();
 
         user1.setId(1);
-        user1.setFirstName("mert");
-        user1.setLastName("kayatay");
+        user1.setFirstName("Mert");
+        user1.setLastName("Kayatay");
         user1.setBirthDate("1999.09.29");
         user1.setNationalityId("01234567890");
 
