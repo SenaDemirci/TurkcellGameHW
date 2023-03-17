@@ -14,7 +14,6 @@ public class Promotions {
         this.discountRate = discountRate;
     }
 
-
     public int getId() {
         return id;
     }

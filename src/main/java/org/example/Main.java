@@ -5,28 +5,23 @@ import org.example.entities.Games;
 import org.example.entities.Promotions;
 import org.example.entities.User;
 import org.example.services.manager.GamesManager;
+import org.example.services.manager.PromotionManager;
 import org.example.services.manager.UserManager;
 
 public class Main {
     public static void main(String[] args) {
         EDevlet mernis = new EDevlet();
 
-        User user1 = new User();
-
-        user1.setId(1);
-        user1.setFirstName("Mert");
-        user1.setLastName("Kayatay");
-        user1.setBirthDate("1999.09.29");
-        user1.setNationalityId("01234567890");
+        User user1 = new User(1,"mert","kayatay","1999.09.29","01234567890");
 
         UserManager userManager = new UserManager();
         userManager.add(user1);
-        System.out.println(user1.getFirstName() + user1.getLastName() + " Validating...");
+        System.out.println(user1.getFirstName() + " " + user1.getLastName() + " validating...");
 
-        boolean isValid = mernis.validation(user1.getFirstName(), user1.getLastName(), user1.getBirthDate(), user1.getNationalityId());
-        if(isValid){
+        boolean isValid = mernis.validate(user1);
+        if (isValid) {
             System.out.println("User validated");
-        }else{
+        } else{
             System.out.println("User cannot validated!");
         }
 
@@ -35,21 +30,15 @@ public class Main {
         promotions.setId(1);
         promotions.setDiscountRate(30.0);
 
-        Games games = new Games();
+        PromotionManager promotionManager = new PromotionManager();
+        promotionManager.add(user1, promotions);
+
+        Games games = new Games(1, "CSGO", 60);
+
         GamesManager gamesManager = new GamesManager();
-        games.setPrice(1);
-        games.setName("CSGO");
-        games.setPrice(60);
+
         gamesManager.add(games);
         gamesManager.sell(games, user1, promotions);
-
-
-
-
-
-
-
-
 
     }
 }

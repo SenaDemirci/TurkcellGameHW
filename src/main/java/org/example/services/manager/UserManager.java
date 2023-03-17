@@ -7,19 +7,16 @@ public class UserManager implements UserService {
 
     @Override
     public void add(User user) {
-        System.out.println("Added");
-
+        System.out.println(user.getFirstName() + " " + user.getLastName() + " " + "added");
     }
 
     @Override
     public void delete(User user) {
-        System.out.println("Deleted");
-
+        System.out.println(user.getFirstName() + " " + user.getLastName() + " " + "deleted");
     }
 
     @Override
     public void update(User user) {
-        System.out.println("Updated");
-
+        System.out.println(user.getFirstName() + " " + user.getLastName() + " " + "updated");
     }
 }

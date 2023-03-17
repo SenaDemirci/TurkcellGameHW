@@ -6,26 +6,23 @@ import org.example.entities.User;
 import org.example.services.GamesService;
 
 public class GamesManager implements GamesService {
-
-
     @Override
     public void add(Games games) {
-        System.out.println("Game added");
+        System.out.println(games.getName() + " Game added");
     }
 
     @Override
     public void delete(Games games) {
-        System.out.println("Game deleted");
+        System.out.println(games.getName() + " Game deleted");
     }
 
     @Override
     public void update(Games games) {
-        System.out.println("Game updated");
+        System.out.println(games.getName() + " Game updated");
     }
 
     @Override
     public void sell(Games games, User user, Promotions promotions) {
-        System.out.println(games.getName() + " selled to " + user.getFirstName() + " with " + promotions.getDiscountRate() + " discount rate");
-
+        System.out.println(games.getName() + " selled to " + user.getFirstName() + " with %" + promotions.getDiscountRate() + " discount rate");
     }
 }
