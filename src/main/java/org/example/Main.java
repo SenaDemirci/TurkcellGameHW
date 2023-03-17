@@ -31,9 +31,10 @@ public class Main {
         promotions.setDiscountRate(30.0);
 
         PromotionManager promotionManager = new PromotionManager();
-        promotionManager.add(user1, promotions);
 
         Games games = new Games(1, "CSGO", 60);
+
+        promotionManager.add(games, promotions);
 
         GamesManager gamesManager = new GamesManager();
 

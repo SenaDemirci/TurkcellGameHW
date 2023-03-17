@@ -1,21 +1,20 @@
 package org.example.services.manager;
 
+import org.example.entities.Games;
 import org.example.entities.Promotions;
-import org.example.entities.User;
 import org.example.services.PromotionService;
 
 public class PromotionManager implements PromotionService {
-
-    public void add(User user, Promotions promotions){
-        System.out.println(promotions.getPromotionDescription() + " promotion has been assigned to " + user.getFirstName());
+    public void add(Games games, Promotions promotions){
+        System.out.println(promotions.getPromotionDescription() + " promotion was defined for the " +  games.getName());
     }
 
-    public void delete(User user, Promotions promotions){
-        System.out.println(user.getFirstName() + "'s " + promotions.getPromotionDescription() + " promotion has been deleted");
+    public void delete(Games games, Promotions promotions){
+        System.out.println(promotions.getPromotionDescription() + " promotion has been deleted for " + games.getName() + " game");
     }
 
     @Override
-    public void update(User user, Promotions promotions) {
-        System.out.println(user.getFirstName() + "'s " + promotions.getPromotionDescription() + " promotion has been updated");
+    public void update(Games games, Promotions promotions) {
+        System.out.println(promotions.getPromotionDescription() + " promotion has been updated for " + games.getName() + "game");
     }
 }
